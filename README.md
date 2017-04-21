@@ -35,6 +35,6 @@ access_log syslog:server=unix:/dev/log,facility=local7,tag=nginx,severity=info;
 # Useful
 - https://nginx.org/en/docs/syslog.html 
 - `journalctl -u nginx.service --since today`
-- `journalctl -u nginx.service -n`
+- List last 10 lines: `journalctl -u nginx.service -n`
 - get logs based on severity: `journalctl -p err -b`
 - `awk '{print $9}' access.log | sort | uniq -c | sort -rn`
