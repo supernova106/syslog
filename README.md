@@ -23,10 +23,11 @@ emerg: The system is in an unusable state and requires immediate attention.
 - directly to syslog by using the following configs
 
 ```
-error_log syslog:server=unix:/dev/log error;
-access_log syslog:server=unix:/dev/log,facility=local7,tag=nginx,severity=info;
+error_log syslog:server=unix:/dev/log,tag=nginx_error error;
+access_log syslog:server=unix:/dev/log,facility=local7,tag=nginx_access,severity=info;
 ```
 
+- `tag`: to make log parsing easier
 - `facility`: type of program logging the messag, default is `local7`
 
 # Docker
