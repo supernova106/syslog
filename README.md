@@ -30,6 +30,9 @@ access_log syslog:server=unix:/dev/log,facility=local7,tag=nginx_access,severity
 - `tag`: to make log parsing easier
 - `facility`: type of program logging the messag, default is `local7`
 
+- NGINX <= 1.7.1, use imfile Module of Rsyslog
+- http://www.rsyslog.com/doc/v8-stable/configuration/modules/imfile.html
+
 # Docker
 - run `start_nginx_docker.sh`
 
